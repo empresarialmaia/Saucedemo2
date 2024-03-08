@@ -8,14 +8,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "",
-		glue = "",
-		tags = "@",
+		features = "src/test/resources/features",
+		glue = "saucedemo.automation.steps",
+		tags = "@login",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
-		plugin = {"pretty","https:target/cucumber-report.https"}
-		
+		plugin = {"pretty","html:target/cucumber-report.html"}	
 		
 		
 		
